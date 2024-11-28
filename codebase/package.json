@@ -1,0 +1,24 @@
+{
+  "name": "minio-exporter-app",
+  "version": "1.0.0",
+  "description": "Sample exporter app for minio endpoint which exposes prometheus metrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanzeeb-samee/minio-exporter.git"
+  },
+  "author": "Tanzeeb Samee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanzeeb-samee/minio-exporter/issues"
+  },
+  "homepage": "https://github.com/tanzeeb-samee/minio-exporter#readme",
+  "dependencies": {
+    "axios": "^1.7.8",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1"
+  }
+}
