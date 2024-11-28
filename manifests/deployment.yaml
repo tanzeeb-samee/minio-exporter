@@ -1,0 +1,31 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minio-exporter-app
+  labels:
+    app: minio-exporter-app
+spec:
+  selector:
+    matchLabels:
+      app: minio-exporter-app
+  replicas: 1
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+      labels:
+        app: minio-exporter-app
+    spec:
+      containers:
+      - name: minio-exporter-app
+        image: <your-registry-image-location>
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: minio-exporter-app-configmap
+      
