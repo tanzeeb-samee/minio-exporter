@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: minio-exporter-app-configmap
+
+data:  
+  MINIO_METRICS_URL : "https://<your-minio-domain>/minio/v2/metrics/cluster"
+  PORT : "8080"
+  FETCH_INTERVAL : "30000"
+  BEARER_TOKEN: ""
